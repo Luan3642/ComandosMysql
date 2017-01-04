@@ -37,6 +37,9 @@ public class ComandoMysql {
 	    
 	  APAGANDO UMA LINHA DA TABELA
          DELETE FROM NOME_TABELA WHERE NOME_CAMPO = 4;
+	    
+	    APAGANDO OS DADOS INTEIROS DA TABELA, MENOS A TABELA
+		    TRUNCATE TABLE NOME_TABLEA;
        }
     
     }
