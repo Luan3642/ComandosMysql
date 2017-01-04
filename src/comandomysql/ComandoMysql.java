@@ -34,6 +34,9 @@ public class ComandoMysql {
 	  
 	   APAGANDO A TABELA
 	  drop table lote;*/
+	    
+	  APAGANDO UMA LINHA DA TABELA
+         DELETE FROM NOME_TABELA WHERE NOME_CAMPO = 4;
        }
     
     }
