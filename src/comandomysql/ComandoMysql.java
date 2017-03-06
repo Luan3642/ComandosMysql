@@ -36,10 +36,27 @@ public class ComandoMysql {
 	  drop table lote;*/
 	    
 	  APAGANDO UMA LINHA DA TABELA
-         DELETE FROM NOME_TABELA WHERE NOME_CAMPO = 4;
+          DELETE FROM NOME_TABELA WHERE NOME_CAMPO = 4;
 	    
 	    APAGANDO OS DADOS INTEIROS DA TABELA, MENOS A TABELA
-		    TRUNCATE TABLE NOME_TABLEA;
+            TRUNCATE TABLE NOME_TABELA
+	    
+	    Conceito de banco de dados
+		    
+	    SQL Linguagem estruturada
+		    
+            DDL Data Definition Language (Linguagem de difinição de dados)
+		    
+	    DML Data Manipulation Language (Linguagem de manipulação de dados)
+		    
+	    DQL Data Query Language (Linguagem de consulta de dados)
+		    
+	    DCL Data Control Language (Linguagem de controle de dados)
+		    
+	    DTL Data Transaction Language (Linguagem de transação de dados)    
+		    
+		    
+		    
        }
     
     }
