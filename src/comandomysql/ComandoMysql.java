@@ -57,6 +57,11 @@ public class ComandoMysql {
             -delete: exclui dados
 		    
 	    DQL Data Query Language (Linguagem de consulta de dados)
+	    -Select: retorna dados.
+            -Ordenação de dados 
+            -Agrupamento de dados.
+	    -Funções aritméticas. 
+	    -Filtros de seleção.
 		    
 	    DCL Data Control Language (Linguagem de controle de dados)
 	    -Grant: Habita acessa a dados e operações. 
