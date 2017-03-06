@@ -45,15 +45,15 @@ public class ComandoMysql {
 		    
 	    SQL Linguagem estruturada
 		    
-            DDL Data Definition Language (Linguagem de difinição de dados)
+            DDL Data Definition Language (Linguagem de difinição de dados) 
 		    
 	    DML Data Manipulation Language (Linguagem de manipulação de dados)
 		    
 	    DQL Data Query Language (Linguagem de consulta de dados)
 		    
-	    DCL Data Control Language (Linguagem de controle de dados)
+	    DCL Data Control Language (Linguagem de controle de dados): Grant: Habita acessa a dados e operações, revoke: revoga acesso a dados e operações. 
 		    
-	    DTL Data Transaction Language (Linguagem de transação de dados)    
+	    DTL Data Transaction Language (Linguagem de transação de dados): Start  transaction: incia a transação. commit: concretiza a transação, rolback: anula a transação      
 		    
 		    
 		    
