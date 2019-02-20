@@ -1,47 +1,115 @@
 
-          COMO REMOVER UMA COLUNA
+          
+
+
+	  # COMO CRIAR UMA BASE DE DADOS 
+	  create database luan;
+	  
+
+	  # USANDO A SUA BASE DE DADOS 
+	  use luan;
+
+	  
+	  # CRIANDO UMA TABELA
+	  create table luan (
+	  id int auto_increment primary key,
+	  nome varchar(30),
+          idade tinyint,
+	  sexo char,
+          peso float,
+	  altura float,
+	  nacionalidade varchar(30 
+	 );	  
+		  
+	
+	 # MOSTRANDO A SUA TABELA
+	 describe luan;
+
+
+
+	  # COMO REMOVER UMA COLUNA
 	  alter table  lote
 	  drop column cor;
 	 
 	 
-	  ESCOLHENDO UMA POSIÇÃO NA COLUNA, PARA SE ADICONAR
+	  # ESCOLHENDO UMA POSIÇÃO NA COLUNA, PARA SE ADICONAR
 	  alter table lote
 	  add column nome varchar(10) after garantia;
 	 
 	 
-	  COLOCANDO UMA POSIÇÃO NO PRIMEIRO LUGAR DA TABELA
+	  # COLOCANDO UMA POSIÇÃO NO PRIMEIRO LUGAR DA TABELA
 	  alter table lote
 	  add column qualquer int first;
 	  
 	  
-	  MODIFICANDO O TIPO DA ESTRUTURA
+	  # MODIFICANDO O TIPO DA ESTRUTURA
 	  alter table lote
 	  modify column entrada varchar(100);
 	  
 	  
-	  RENOMEANDO UMA COLUNA
+	  # RENOMEANDO UMA COLUNA
 	  alter table lote
           change column entrada entradinha varchar(20);
 	  
 	  
-	  RENOMEANDO O NOME DA TABELA
+	  # RENOMEANDO O NOME DA TABELA
 	  alter table lote
 	  rename to JAILSON;
 	  
-	  APAGANDO A TABELA
+
+	  # APAGANDO A TABELA
 	  drop table lote;*/
 	    
-	  APAGANDO UMA LINHA DA TABELA
+		  
+	  # APAGANDO UMA LINHA DA TABELA
           DELETE FROM NOME_TABELA WHERE NOME_CAMPO = 4;
 	    
-	  APAGANDO OS DADOS INTEIROS DA TABELA, MENOS A TABELA
+
+
+	  # APAGANDO OS DADOS INTEIROS DA TABELA, MENOS A TABELA
           TRUNCATE TABLE NOME_TABELA
 	  
 --------------------------------------------------------------------------------------------------------------	  	  
 	  
+	   TEORIA BANCO DE DADOS
+	   
+	   Tipos primitivos (VARIAVEIS)  
+  
+  	   *Númerico
+	   
+	   -inteiro: TinyInt, SmallInt, Int, MediumInt, BigInt
+	   
+	   -Real: Decimal, Float, Double, Real
+	   
+	   -Lógico: Bit, Boolean
+	   	   
+  -------------------------------------------------------------------------------------------------------------
+  	 
+		   
+	   *Data/tempo: Date, DateTime, TimeStamp, Time, Year
+	   
+	   
+  -------------------------------------------------------------------------------------------------------------
+  
+	   *Literal
+	   
+	   -caractere: Char, VarChar
+	   
+	   -texto: TinyText, Text, MediumText, LongText
 
-	  Conceito de banco de dados
-		    
+	   -Binario: TinyBlob, Blob, MediumBlob, LongBlob
+	   
+	   -Coleção: Enum, Set
+	   
+---------------------------------------------------------------------------------------------------------------
+
+
+	   *Espacial: Geometry, Point, Polygon, MultiPolygon	
+		   
+----------------------------------------------------------------------------------------------------------------	   
+		  		   
+		  
+		   
 	    SQL Linguagem estruturada
 		    
             DDL Data Definition Language (Linguagem de difinição de dados): 
