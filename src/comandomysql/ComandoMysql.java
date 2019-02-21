@@ -19,7 +19,10 @@
           peso float,
 	  altura float,
 	  nacionalidade varchar(30)
-	 );	  
+	 );
+
+	 # EXIBINDO DADOS DA TABELA
+	 SELECT * FROM luan
 		  
 	
 	 # MOSTRANDO A SUA TABELA
