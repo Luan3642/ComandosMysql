@@ -12,7 +12,7 @@
 	  
 	  # CRIANDO UMA TABELA
 	  create table luan (
-	  id int auto_increment primary key,
+	  id int auto_increment not null primary key,
 	  nome varchar(30),
           idade tinyint,
 	  sexo char,
