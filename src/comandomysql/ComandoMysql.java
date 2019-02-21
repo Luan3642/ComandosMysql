@@ -18,7 +18,7 @@
 	  sexo char,
           peso float,
 	  altura float,
-	  nacionalidade varchar(30 
+	  nacionalidade varchar(30)
 	 );	  
 		  
 	
