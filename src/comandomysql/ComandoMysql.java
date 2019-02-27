@@ -4,23 +4,24 @@
 
 
 	  # COMO CRIAR UMA BASE DE DADOS 
-	  create database luan;
+	  CREATE DATABASE mydb
+  	  CHARACTER SET utf8
+  	  COLLATE utf8_general_ci;
 	  
 
 	  # USANDO A SUA BASE DE DADOS 
-	  use luan;
+	  use mydb;
 
 	  
 	  # CRIANDO UMA TABELA
 	  create table luan (
 	  id int auto_increment not null primary key,
 	  nome varchar(30),
-          idade tinyint,
-	  sexo char,
-          peso float,
-	  altura float,
+          nascimento date,
+	  sexo enum("M","F"),
+          peso decimal(3,1),
 	  nacionalidade varchar(30)
-	 );
+	 ) default charset = utf8
 
 	 # EXIBINDO DADOS DA TABELA
 	 SELECT * FROM luan
