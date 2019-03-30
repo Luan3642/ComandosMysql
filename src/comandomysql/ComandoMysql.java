@@ -2,9 +2,8 @@
 	  http://www.generatedata.com/
           
 
-
 	  # COMO CRIAR UMA BASE DE DADOS 
-	  CREATE DATABASE mydb
+	  creata database mydb
   	  CHARACTER SET utf8
   	  COLLATE utf8_general_ci;
 	  
@@ -12,58 +11,171 @@
 	  # USANDO A SUA BASE DE DADOS 
 	  use mydb;
 
+	  # APAGANDO A SUA DATABASE
+	  drop database mydb;
+
 	  
 	  # CRIANDO UMA TABELA
-	  create table luan (
+	  create table pessoa (
 	  id int auto_increment not null primary key,
 	  nome varchar(30),
           nascimento date,
 	  sexo enum("M","F"),
           peso decimal(3,1),
-	  nacionalidade varchar(30)
+	  nacionalidade varchar(30),	
+   	  profissoa varchar(30)
 	 ) default charset = utf8
+	 
+	 
+	  # INSERINDO DADOS NA TABELA
+	  insert into pessoa (id, nome, nascimento, sexo, peso, nacionalidade, profissao)
+          values (default, 'Izabela', '2000-08-01', 'F', '52.3' ,'Brasileira', 'Atendente');
+	 
 
-	 # EXIBINDO DADOS DA TABELA
-	 SELECT * FROM luan
+	  # EXIBINDO DADOS DA TABELA
+	  select * from pessoa
+	  
+	  
+	  # SELECIONANDO OS DADOS DE UMA TABELA ORDENDANDO DE FORMA CRESCENTE
+	  select * from pessoa
+	  order by nome;
+
+
+	  # SELECIONANDO OS DADOS DE UMA TABELA ORNDENANDO DE FORMA DECRECENTE
+	  select * from pessoa
+	  order by nome desc;
+
+
+	  # SELECIONANDO ALGUNS DADOS APENAS DA TABELA
+	  select nome, sexo  from pessoa; 
+	  
+
+	  # SELECIONANDO TODOS OS DADOS QUE POSSUEM 'M'
+	  select * from pessoa
+	  where sexo = 'M'
+
+		  
+	 # SELECIONADO TODO OS DADOS QUE SÃO MENORES QUE O ANO DE 2011
+	  select * from pessoa 
+	  where ano <2011;
+
+
+	 # SELECIONADO TODO OS DADOS QUE SÃO MAIORES QUE O ANO DE 2011
+	  select * from pessoa 
+	  where ano > 2011;
+
+
+	 # SELECIONADO TODO OS DADOS QUE SÃO IGUAIS A O ANO DE 2011
+	  select * from pessoa 
+	  where ano = 2011;
+	  
+
+
+	# SELECIONADO TODO OS DADOS QUE SÃO DIFRENTES A O ANO DE 2011
+	  select * from pessoa 
+	  where ano != 2011;
+	  
+
+
+	# SELECIONANDO TODOS OS VALORES DE UM DETERMINADO CAMPO
+	  select * from pessoa 
+          where ano in (2010, 2011);
+
+	
+	# SELECIONANDO TODOS OS VALORES QUE COMEÇAM COM (L)
+	  select * from pessoa
+	  where nome like 'L%'
+		
+	
+		
+	 # SELECIONANDO TODOS OS VALORES QUE TERMINAM COM A LETRA (A) NO FINAL
+	  select * from pessoa
+	  where nome like '%A';
+
+	
+	 # SELECIONANDO TODOS OS VALORES QUER COMEÇA COM A LETRA (A) NO INICIO, NO MEIO E NO FINAL.
+	   select * from pessoa
+	   where nome like '%A%'
+	
+	
+	 # SELECIONANDO TODOS OS VALORES QUE NÃO CONTÉM A LETRA (A)
+	  select * from pessoa
+	  where nome not like '%A%'
+		
+	
+	 # SELECIONANDO TODAS AS PESSOAS QUE CONTÉM MAGALHÃES NO SOBRENOME
+	 select * from pessoa
+	 where nome like '%_magalhães%';
+
+
+	  # SELECIONANDO CAMPOS DISTINTOS, PEGANDO SOMENTE UM VALOR ÚNICO (NÃO REPETE VALORES)
+	  select distinct nacionalidade  from pessoa;
+
+	
+	  # CONTANDO QUANTOS CAMPOS TEMOS NA TABELA 
+	   select count(*) from pessoa;
+
+	
+	  # CONTANDO NO CAMPO (ANO) VALORES ACIMA DE (2012)
+	  select count(*) from pessoa where ano > 2012;
+
+	
+	  # DESCOBRINDO O MAIOR VALOR DO CAMPO (ANO)
+	  select max(ano) from pessoas;
+
+	
+	  # DESCOBRINDO O MENOR VALOR DO CAMPO(ANO)
+	  select min(ano) from pessoas;
+
+	
+	 
+	  # SOMANDO UM CAMPO DE UMA TABELA
+	  select sum(totalHorasAulas) from pessoas;
+
+	
+	  # OBTENDO A MÉDIA DE UM CAMPO
+	  select avg(totalHorasAulas) from pessoas;
+	
+	  
 		  
 	
-	 # MOSTRANDO A SUA TABELA
-	 describe luan;
+	  # MOSTRANDO A SUA TABELA
+	  describe pessoa;
 
 
 
 	  # COMO REMOVER UMA COLUNA
-	  alter table  lote
-	  drop column cor;
+	  alter table  pessoa
+	  drop column profissao;
 	 
 	 
 	  # ESCOLHENDO UMA POSIÇÃO NA COLUNA, PARA SE ADICONAR
-	  alter table lote
-	  add column nome varchar(10) after garantia;
+	  alter table  pessoa
+	  add column profissao varchar(30) after nome;
 	 
 	 
 	  # COLOCANDO UMA POSIÇÃO NO PRIMEIRO LUGAR DA TABELA
-	  alter table lote
+	  alter table pessoa
 	  add column qualquer int first;
 	  
 	  
 	  # MODIFICANDO O TIPO DA ESTRUTURA
-	  alter table lote
-	  modify column entrada varchar(100);
+	  alter table pessoa
+	  modify column nascimento varchar(100);
 	  
 	  
 	  # RENOMEANDO UMA COLUNA
-	  alter table lote
-          change column entrada entradinha varchar(20);
+	  alter table pessoa
+          change column nome sobrenome varchar(20);
 	  
 	  
 	  # RENOMEANDO O NOME DA TABELA
-	  alter table lote
+	  alter table pessoa
 	  rename to JAILSON;
 	  
 
 	  # APAGANDO A TABELA
-	  drop table lote;*/
+	  drop table pessoa;
 	    
 		  
 	  # APAGANDO UMA LINHA DA TABELA
