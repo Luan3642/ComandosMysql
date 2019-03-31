@@ -137,6 +137,14 @@
 	  select avg(totalHorasAulas) from pessoas;
 	
 	  
+	  # AGRUPANDO REGISTROS 
+	  select totalHorasAulas from pessoas
+	  group by totalHorasAulas;
+
+	
+	  # AGRUPANDO E AGREGANDO 
+	  select totalHorasAulas, count(nome) from pessoas
+	  group by totalHorasAulas
 		  
 	
 	  # MOSTRANDO A SUA TABELA
