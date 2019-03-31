@@ -144,7 +144,13 @@
 	
 	  # AGRUPANDO E AGREGANDO 
 	  select totalHorasAulas, count(nome) from pessoas
+	  group by totalHorasAulas;
+
+
+	  # UTILIZANDO HAVING COMO SE FOSSE UM IF EM GROUP BY
+	  select * from pessoas
 	  group by totalHorasAulas
+	  having totalHorasAulas > 20;
 		  
 	
 	  # MOSTRANDO A SUA TABELA
