@@ -45,6 +45,12 @@
 	  order by nome;
 
 
+	 
+	  # SELECIONADO TODOS OS DADOS DE UMA TABELA, BUSCANDO ESPECIFICAMENTE PELO NÚMERO DE UM FUNCIONÁRIO E A DATA TRABALHADA
+	  select * from logoper
+	  where funcionario = '1377' and `DATA` = '2019-11-25';
+
+
 	  # SELECIONANDO OS DADOS DE UMA TABELA ORNDENANDO DE FORMA DECRECENTE
 	  select * from pessoa
 	  order by nome desc;
